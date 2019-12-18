@@ -1,0 +1,44 @@
+<table>
+        <tr>
+            <td>Project Name:</td>
+            <td>
+                <input type="hidden" [value]="bugDetails.projObj.projId">{{bugDetails.projObj.projName}}
+            </td>
+        </tr>
+        <tr>
+            <td> Developer List:</td>
+            <td><select name="project" class="form-control" required [(ngModel)]="userId">
+        <option [value]="d.id" *ngFor="let d of deveList">{{d.name}}</option>
+     </select>
+            </td>
+        </tr>
+        <tr>
+            <td> Buy Severity: </td>
+            <td><input type="hidden" class="form-control" [value]="bugDetails.severityObj.sId" readonly="readonly">{{bugDetails.severityObj.sType}}
+            </td>
+        </tr>
+        <tr>
+            <td>Bug Type:</td>
+            <td><input type="hidden" class="form-control" [value]="bugDetails.bugTypeObj.bId" readonly="readonly"> {{bugDetails.bugTypeObj.bType}}</td>
+        </tr>
+        <tr>
+            <td>Assigned Date</td>
+            <td><input type="date" class="form-control" [(ngModel)]="createdDate" required>
+                <td>
+        </tr>
+        <tr>
+            <td>Planned End Date</td>
+            <td><input type="date" class="form-control" [(ngModel)]="endDate" required>
+                <td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><textarea cols="30" rows="10" class="form-control" [value]="bugDetails.desc" readonly="readonly"></textarea>
+                <td>
+        </tr>
+        <tr>
+          
+            <td><input type="submit" value="Allocating Bug To Developer" (click)="onSubmit()"></td>
+        </tr>
+</table>
+

@@ -1,0 +1,43 @@
+ <div id="d1">
+                <form  *ngIf="pObj" [formGroup]="bugAllocForm" (ngSubmit)="onSubmit()">
+                    <table class=" table ">
+                        <tr>
+                            <td> Project Name: </td>
+                            <td>
+                                <input type="text" [value]="pObj.projName" readonly>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Buy Type: </td>
+                            <td><select formControlName="bugType">
+                          <option *ngFor="let b of bugDetail " [value]="b.bId" >{{b.bType}}</option>
+                           </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Severity : </td>
+                            <td><select formControlName="bugSeverity">
+                <option *ngFor="let s of severityList" [value]="s.sId" >{{s.sType}}</option> 
+                 </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Description: </td>
+                            
+                            <td>
+                                    <textarea class="form-control" name="Description" id="Description" formControlName="Description" 
+                                    rows="6" 
+                                    placeholder="Add Bug Description "></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button type="submit " class="btn-dark ">Report Bug</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            

@@ -1,0 +1,54 @@
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Bug Details</title><meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<div>
+
+
+ <div >
+
+<div id="d2" align="center">
+<h1>Details Of Bugs</h1>
+</div>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Bug Allocated Id</th>
+      <th scope="col">Project name</th>
+      <th scope="col">Project name</th>
+      <th scope="col">Bug Status</th>
+      <th scope="col">Bug Severity</th>
+      <th scope="col">Bug Description</th>
+      <th scope="col">Bug Assignment</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let b of bugDetailList">
+          <td>{{b.bugAllocateId}}</td>
+          <td>{{b.projObj.projName}}</td>
+          <td>{{b.bugTypeObj.bType}}</td>
+          <td>{{b.bugStatusObj.statusName}}</td>
+          <td>{{b.severityObj.sType}}</td>
+          <td>{{b.desc}}</td>
+          <td><a routerLink="/allocatebug" id="btn" class="btn btn-success btn-block" (click)="onClick(b)">Assign Bug
+  
+  </a></td>
+      </tr>
+
+  </tbody>
+
+</table>
+
+</div>
+
+
+

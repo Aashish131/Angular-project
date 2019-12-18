@@ -1,0 +1,42 @@
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>  
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login" class="active" *ngIf="router.url==='/'||router.url==='/login'">Login</a>  
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink=''>About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="#">Link</a>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/Manager" class="active" *ngIf="router.url==='/Manager'||router.url==='/'"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink='/assignproject'  *ngIf="router.url==='/Manager'||router.url==='/assignproject'">AssignProject</a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" routerLink='/viewbugs'  *ngIf="router.url==='/Manager'||router.url==='/viewbugs'||router.url==='/assignproject'">View Bug</a>
+       </li>
+       <li class="nav-item">
+          <a class="nav-link" routerLink="/allocateproject" class="active" *ngIf="router.url==='/Tester'||router.url==='/allocateproject'">AllocatedProject</a>
+        </li>
+       
+    </ul>
+  </nav>
+  
+  
+  
+  </body>
+ 
